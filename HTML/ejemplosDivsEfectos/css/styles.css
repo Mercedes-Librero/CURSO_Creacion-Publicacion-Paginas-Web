@@ -1,0 +1,72 @@
+/* HOJA DE ESTILOS*/
+/*
+    body { } --> Modificacion de la entidad
+
+    .mi_clase { } --> Creacion de una clase universal
+
+    #mi-elemento { }  --> Creacion de clase para un unico elemento (ID)
+
+    body.mi_clase { } --> creacion de clase para una entidad HTML
+
+    table.mi_clase td { }  --> se aplica a los TD solo de table que tenga es clase
+
+    table.mi_clase td p  { }  --> se aplica a los P que estan el los TD solo de table que tenga es clase
+
+    */
+#imagenes{
+    background-image: url("../images/perro1.jfif");
+    width: 220px;
+    height: 200px;
+}
+#imagenes:hover{
+    background-image: url("../images/perro3.png");
+}
+#titulo{
+    background-color: beige;
+    color: brown;
+}
+#titulo:hover{
+    background-color: rgb(225, 220, 245);
+    color: coral;
+}
+#imagenes1{
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    border: 2px solid rgb(8, 86, 28);
+    float: left;
+    margin-right: 5px;
+}
+#imagenes1:hover{
+    width: 400px;
+    height: 200px;
+    background-color: rgb(220, 247, 227);
+    overflow: scroll;
+}
+#imagenes2{
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    border: 2px solid rgb(70, 56, 224);
+    float: left;
+    margin-right: 5px;
+}
+#imagenes2:hover{
+    width: 400px;
+    height: 200px;
+    background-color: rgb(156, 156, 232);
+    overflow: scroll;
+}
+#imagenes3{
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    border: 2px solid rgb(167, 16, 19);
+    float: left;
+    margin-right: 5px;
+}
+#imagenes3:hover{
+    visibility: hidden;
+    background-color: rgb(246, 193, 177);
+    overflow: scroll;
+}
