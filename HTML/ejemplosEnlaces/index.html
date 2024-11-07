@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es"> 
+
+	<head>  <!--Configuracion pagina-->
+		<!-- <!DOCTYPE html>-> HTML5  -->
+		<!--ltr= se lee de izq a der; lenguaje español-->
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+		<meta charset='UTF-8'/> <!-- ASCII España -->
+
+		<meta name="description" content="PAGINA MARAVILLOSA">
+		<meta name="keywords" content="programadora, web, superior">
+		<meta name="autor" content="MERCEDES LIBRERO MARTIN">		
+		<meta name="copyright" content="dueño web">	
+		
+		<title>Pagina de Mercedes</title> <!--PESTAÑA NAVEGADOR-->
+	</head>
+	
+	<body>		
+		<a href="downloads/3_Actuadores_neumaticos_00.zip">Descargar un ZIP</a> <br><br>
+		<a href="downloads/CSS_Avanzado.pdf">Descarga un PDF</a><br><br>
+
+		<!--  en HTML5 no funciona
+			<a href="downloads/The_Alan_Parsons_Project.mkv">MKV</a>
+			<a href="downloads/The_Ladd_Company_Logo_Intro.avi">AVI</a>
+		
+		Para mostrar video en HTML5 usar etiqueta <video><sourde></video>
+				MUTED obligatorio sino no fuciona
+				type  obligatorio 
+			
+		Para mostrar audio en HTML5 usar etiqueta <audio><source></audio>
+		-->
+		<video width="640" controls autoplay muted> <!-- AUTOPLAY MUTED obligatorio-->
+			<source src="downloads/The_Ladd_Company_Logo_Intro.mp4" type="video/mp4">
+			Su navegador no soporta la reproduccion del video
+		</video>	
+		<br><br>
+		<audio controls>
+			<source src="downloads/Haunt_Me.mp3" type="audio/mp3">
+			Su navegador no soporta la reproduccion de audio
+		</audio>		
+	</body>
+	
+</html>
