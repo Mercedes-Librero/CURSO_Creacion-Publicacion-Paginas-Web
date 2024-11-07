@@ -1,0 +1,16 @@
+/* HOJA DE ESTILOS*/
+/*
+    body { } --> Modificacion de la entidad
+
+    .mi_clase { } --> Creacion de una clase universal
+
+    #mi-elemento { }  --> Creacion de clase para un unico elemento (ID)
+
+    body.mi_clase { } --> creacion de clase para una entidad HTML
+
+    table.mi_clase td { }  --> se aplica a los TD solo de table que tenga es clase
+
+    table.mi_clase td p  { }  --> se aplica a los P que estan el los TD solo de table que tenga es clase
+
+    */
+

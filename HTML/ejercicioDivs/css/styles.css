@@ -1,0 +1,76 @@
+/* HOJA DE ESTILOS*/
+/*
+    body { } --> Modificacion de la entidad
+
+    .mi_clase { } --> Creacion de una clase universal
+
+    #mi-elemento { }  --> Creacion de clase para un unico elemento (ID)
+
+    body.mi_clase { } --> creacion de clase para una entidad HTML
+
+    table.mi_clase td { }  --> se aplica a los TD solo de table que tenga es clase
+
+    table.mi_clase td p  { }  --> se aplica a los P que estan el los TD solo de table que tenga es clase
+
+    */
+.logotipo{
+    height: 150px;
+}
+a{
+    color: rgb(253, 239, 244);
+}
+h1,h2,h5,h6{
+    text-align: center;
+    color: rgb(253, 239, 244);
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    background-image: url(../images/fondo.webp);
+    background-repeat: no-repeat;
+}
+/*                                         DIVs                                     */
+
+div{
+    float:left;
+    margin-top: 4px;
+    /*border: rgb(80, 255, 112) solid 1px;*/
+    /*clear: both; que el DIV busque una posicion despejado*/
+}
+div.contenido{    
+    background-color: #ffffff;
+    width:31% ;
+    float:left;
+    padding: 9px;
+    padding-bottom: 20px;
+}
+#contenedor-principal{
+    margin-top: -3px;
+    width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+#encabezado{
+    border: 2px  rgb(244, 84, 138) solid;
+    border-radius: 15px; /*Borde curvado*/
+    width: 100%;
+    background-color: rgb(82, 74, 78);
+    height: 150px;
+}
+#menu{
+    width: 100%;
+    border-radius: 15px;
+    height: auto;
+    padding: 5px;
+    background-color: rgb(244, 84, 138);
+    clear: both;
+}
+#pie-de-pagina{
+    background-color: rgb(82, 74, 78);
+    margin-left: auto;
+    margin-right: auto;
+    width: 920px;
+    clear: both;
+    box-shadow: 5px 5px 15px ; /*Sombra*/
+    float: none;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es"> 
+
+	<head>
+
+		<script>
+// Variable GLOBAL / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+			var GlobalFecha = new Date();  // Objeto DATE
+			const miConstante = 3.1416; // VARIABLE CONSTANTE 
+			const miConstanteArray = [1,2,3] // ARRAY CONSTANTE
+		</script>
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+		<meta charset='UTF-8'/> <!-- ASCII España -->
+        
+		<meta name="description" content="PAGINA MARAVILLOSA">
+		<meta name="keywords" content="programadora, web, superior">
+		<meta name="autor" content="MERCEDES LIBRERO MARTIN">		
+		<meta name="copyright" content="dueño web">	
+		
+		<title>Pagina de Java Script</title>
+
+	</head>
+	
+	<body >
+		<header class="header"><h1>Java Script</h1></header>
+						   
+		<article class="post article" id="article_mer">
+			<p onclick="prueba(10,3);">Todos los derechos reservados <span id="gnz-year">2020</span></p>
+			<input type="button" value="Boton" onclick="alert('Otra vez')">
+			<input type="button" value="Limpiar" onclick="blanco();">
+			<input onclick="preguntarNombre();" type="button" value="Tu nombre?">
+			<br><br><br><br><br>
+			<input onclick="MostrarFecha();" type="button" value="Boton 1">
+		</article>
+
+		<script>
+// CAJAS DE MENSAJES / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /			
+			function preguntarNombre(){
+
+				// Caja mensaje recoge texto
+				var NombreUsuario;
+				NombreUsuario = prompt('Dime tu nombre','Escribelo aqui...');
+
+				if(NombreUsuario=='Mercedes'){
+					alert('Hola Mercedes!!'); // mensaje de alerta
+				}else{
+					document.location = 'https://www.fundaciondfa.es'
+				}
+			}
+// / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / 
+
+			document.write('<br><br>Quien eres??'); // escribe en el BODY
+			document.title = 'Cambiamos el TITLE';
+
+			// Solo el año
+			window.document.getElementById('gnz-year').innerHTML= GlobalFecha.getFullYear();
+			// Fecha completa
+		    //window.document.getElementById('gnz-year').innerHTML= GlobalFecha.getDate() + '/' + (GlobalFecha.getMonth() + 1) + '/' + GlobalFecha.getFullYear() ;
+
+			function prueba(num_a,num_b){ 
+        		var suma = num_a + num_b; 
+        		alert('La suma es: ' + suma);
+    		}
+    
+			function blanco(){
+        		document.getElementById('article_mer').innerHTML=' ';
+    		}
+
+// Variables LOCALES / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+			function MostrarFecha(){ 
+				let DiaEnCurso = GlobalFecha.getDate(); 
+				//let MesEnCurso = GlobalFecha.getMonth() + 1; 
+				let AnioEnCurso = GlobalFecha.getFullYear();
+
+				document.write(DiaSemana() + ', '+  DiaEnCurso + ' de ' + 
+								MesEnCurso() + ' de ' + AnioEnCurso);
+			}
+
+// Uso ARRAY / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+			function DiaSemana(){
+				//var  arrayDias= new Array(7); 
+				//var arrayDias = new Array('Domingo','Lunes','Martes','Miercoles',
+				// 							'Jueves','Viernes','Sabado');
+				var arrayDias = ['Domingo','Lunes','Martes','Miercoles',
+				 							'Jueves','Viernes','Sabado'];
+
+				return(arrayDias[GlobalFecha.getDay()]);
+			}
+
+// Uso SWICH / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / 
+			function MesEnCurso(){
+				switch(GlobalFecha.getMonth()) {
+					case 0://Enero
+						return('Enero');
+					break;
+					case 1:
+						return('Febrero');
+					break;
+					case 2:
+						return('Marzo');
+					break;
+					case 3:
+						return('Abril');
+					break;
+					case 4:
+						return('Mayo');
+					break;
+					case 5:
+						return('Junio');
+					break;
+
+					case 6:
+						return('Julio');
+					break;
+					case 7:
+						return('Agosto');
+					break;
+					case 8:
+						return('Septiembre');
+					break;
+					case 9:
+						return('Octubre');
+					break;
+					case 10:
+						return('Noviembre');
+					break;
+					default:
+						return('Diciembre');
+					break;
+				}
+			}
+		</script>	
+
+
+	</body>
+	
+</html>

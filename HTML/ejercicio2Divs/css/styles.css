@@ -1,0 +1,69 @@
+/* HOJA DE ESTILOS*/
+/*
+    body { } --> Modificacion de la entidad
+
+    .mi_clase { } --> Creacion de una clase universal
+
+    #mi-elemento { }  --> Creacion de clase para un unico elemento (ID)
+
+    body.mi_clase { } --> creacion de clase para una entidad HTML
+
+    table.mi_clase td { }  --> se aplica a los TD solo de table que tenga es clase
+
+    table.mi_clase td p  { }  --> se aplica a los P que estan el los TD solo de table que tenga es clase
+
+    */
+
+.logotipo{
+    height: 150px;
+}
+.imagen{
+    height: 200px;
+}
+h1,h2{
+    text-align: center;
+}
+body{
+    background-color: rgb(248, 107, 183);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contenido{    
+    width:30% ;
+    float:left;
+    margin-right: 12px;
+    padding: 9px;
+    box-shadow: 5px 5px 15px ; /*Sombra*/
+    font-size: small;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+#contenedor-principal{
+    background-color: rgb(239, 239, 235);
+    margin-left: auto;
+    margin-right: auto;
+    width: 920px;
+    height: 580px;
+    border-radius: 15px; /*Borde curvado*/
+    padding: 20px;
+}
+#encabezado{
+    width: 900px;
+    float:left;
+}
+#logo{
+    width: 15%;
+    float:left;
+}
+#titulo{
+    float:left;
+    width: 85%;
+}
+#pie-de-pagina{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 920px;
+    clear: both;
+    float: none;
+}
