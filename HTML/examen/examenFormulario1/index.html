@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es"> 
+
+	<head>  <!--Configuracion pagina-->
+		<!-- <!DOCTYPE html>-> HTML5  -->
+		<!--ltr= se lee de izq a der; lenguaje español-->
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+		<meta charset='UTF-8'/> <!-- ASCII España -->
+
+		<meta name="description" content="PAGINA MARAVILLOSA">
+		<meta name="keywords" content="programadora, web, superior">
+		<meta name="autor" content="MERCEDES LIBRERO MARTIN">		
+		<meta name="copyright" content="dueño web">	
+		
+		<title>Ejercicio Formulario 1</title> <!--PESTAÑA NAVEGADOR-->
+
+        <style>
+            body{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                background-color: rgb(18, 91, 80);
+                font-size: 12px;
+                color:  rgb(18, 91, 80);
+            }
+            table{
+                width:100%;
+                padding-left: 10px; 
+                padding-right:10px;
+            }
+            p{
+                font-weight: bold;
+            }
+            .alinear{
+                text-align: right;
+            }
+
+            .contenedor{
+                width: 70%;
+                margin-top: 50px;
+                border: solid 1px rgb(18, 91, 80);
+                background-color: rgb(250, 245, 228);
+                margin-left: auto;
+                margin-right:auto;                
+            }
+            input,select{
+                border-top: 1px solid rgb(255, 99, 99);
+                border-left: 1px solid rgb(255, 99, 99);
+                border-bottom: 1px solid rgb(255, 99, 99);
+                border-right: 1px solid rgb(255, 99, 99);
+                color: rgb(18, 91, 80);
+            }
+        </style> 
+	</head>
+	
+	<body>
+        <div class="principal">	
+            <div class="contenedor">
+                <h1 style="text-align: center;">Alta de usuario</h1>
+                <h4 style="padding-left: 10px;">Los campos marcados con un * son de caracter obligatorio</h4>
+                
+                <form method="post" action="https://www.dfa-for.com/resources/tests/test_post.php">
+                    <table>
+                        <tr>
+                            <td colspan="3"><p>Direccion de correo electrónico</p>             
+                        </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Es importante que utilice su dirección de correo 
+                                institucional para poder disfrutar de todas las opciones 
+                                de Dialnet.
+                            </td>            
+                        </tr>
+                        <tr>
+                            <td class="alinear" width="33%"><label>* Email</label></td> 
+                            <td colspan="2">
+                                <input type="text" size="50" id="correo" name="correo">
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td class="alinear"><label>* Confirmar Email</label></td> 
+                            <td colspan="2">
+                                <input type="text" size="50" id="correoConf" name="correoConf">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><p>Información personal</p></td>            
+                        </tr>
+                        <tr>
+                            <td class="alinear"><label>* Nombre</label></td> 
+                            <td colspan="2">
+                                <input type="text" size="50" id="nombre" name="nombre">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinear"><label>* Primer Apellido</label></td> 
+                            <td colspan="2">
+                                <input type="text" size="50" id="apellido1" name="apellido1">
+                            </td>
+                        </tr>                             
+                        <tr>
+                            <td class="alinear"><label>Segundo Apellido</label></td> 
+                            <td colspan="2">
+                                <input type="text" size="50" id="apellido2" name="apellido2">
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td class="alinear"><label>* Pais</label></td> 
+                            <td colspan="2">
+                                <select id="pais" name="pais">
+                                    <option value="Francia">Francia</option>
+                                    <option value="España" selected>España</option>
+                                    <option value="ReinoUnido">Reino Unido</option>
+                                    <option value="Portugal">Portugal</option>
+                                </select>
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td class="alinear"><label>* Idioma</label></td> 
+                            <td colspan="2">
+                                <select id="idioma" name="idioma">
+                                    <option value="frances">Francés</option>
+                                    <option value="español" selected>Español</option>
+                                    <option value="ingles">inglés</option>
+                                    <option value="portugues">Portugués</option>
+                                </select>
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td></td> 
+                            <td colspan="2">
+                                <input type="radio" name="tipo" value="fisica" id="fisica">
+                                <label for="fisica">Persona física/Natural person</label><br>	
+                                <input type="radio" name="tipo" value="juridica" id="juridica" checked>
+                                <label for="juridica" >Persona juridica/Legal person</label><br>
+                                <input type="radio" name="tipo" value="I7" id="I7">
+                                <label for="I7">Administración Publica/Public body</label>
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td colspan="3"><p>Información de la cuenta</p></td>            
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Deberá recordar esta información.
+                            </td>            
+                        </tr>
+                        <tr>
+                            <td class="alinear"><label>* Usuario</label></td> 
+                            <td colspan="2">
+                                <input type="text" id="usuario" name="usuario">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alinear"><label>* Contraseña</label></td> 
+                            <td width="15%">
+                                <input type="password" id="clave" name="clave">
+                            </td> 
+                            <td rowspan="2">
+                                La contraseña debe tener 8 o más caracteres, combinando letras y números,
+                                y no debe ser la misma que el nombre de usuario.
+                            </td>                         
+                        </tr>                        
+                        <tr>
+                            <td class="alinear"><label>* Repetir Contraseña</label></td> 
+                            <td>
+                                <input type="password" id="clave2" name="clave2">
+                            </td>                          
+                        </tr>
+                        <tr>
+                            <td colspan="3"><p>Envio de noticias por Email</p></td>            
+                        </tr>
+                        <tr>
+                        <td></td> 
+                            <td colspan="2">
+                                <input type="checkbox" id="noticias" name="noticias">
+                                Deseo recibir por email (información sobre nuevos servicios, funcionalidades...)
+                            </td>
+                        </tr>
+                        <tr style="height: 100px;">
+                            <td colspan="3" align="center">
+                                <input type="submit" value="Enviar">
+                            </td>
+                        </tr>                                                                                                                                                                                                                                         
+                    </table>
+                </form>
+            </div>
+    </div>	        
+	</body>
+	
+</html>

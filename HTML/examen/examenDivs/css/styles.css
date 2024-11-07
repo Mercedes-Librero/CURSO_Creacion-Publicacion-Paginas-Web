@@ -1,0 +1,167 @@
+/* HOJA DE ESTILOS*/
+/*
+    body { } --> Modificacion de la entidad
+
+    .mi_clase { } --> Creacion de una clase universal
+
+    #mi-elemento { }  --> Creacion de clase para un unico elemento (ID)
+
+    body.mi_clase { } --> creacion de clase para una entidad HTML
+
+    table.mi_clase td { }  --> se aplica a los TD solo de table que tenga es clase
+
+    table.mi_clase td p  { }  --> se aplica a los P que estan el los TD solo de table que tenga es clase
+
+    */
+
+/* C O L O R E S
+
+naranja = RGB : 231, 97, 67
+verde = RGB : 46, 160, 160
+amarillo = RGB : 243, 183, 33
+veis RGB : 253, 242, 225
+veis oscuro   238, 222, 195
+marron  = RGB : 47, 7, 5
+*/
+
+/* DIVs ----------------------------------------------------------------------------------------------------*/
+#contenedor-principal{
+    background-color: rgb(253, 242, 225);
+    margin-left: auto;
+    margin-right: auto;
+    width: 920px;
+    height: 650px;
+    border-radius: 15px 15px 0px 0px; /*Borde curvado*/
+    padding: 20px;
+}
+#encabezado{
+    width: 900px;
+    float:left;
+    background-color: rgb(238, 222, 195);
+    border-radius: 0px 15px 0px 0px; /*Borde curvado*/
+    height: 150px;
+    /*border: 3px rgb(138, 67, 231) solid;*/   
+}
+#logo{
+    width: 18%;
+    float:left;
+}
+#titulo{
+    float:left;
+    width: 80%;
+}
+#menu{
+    float:left;
+    width:900px;
+    /*border: 5px solid  rgb(80, 255, 226); */
+    height: 30px;
+    background-color: rgb(47, 7, 5);
+    /*border: 3px rgb(231, 97, 67) solid;*/
+}
+#fondoContenido{
+    background-image: url("../images/fondo.webp");
+    background-size: 75%;
+
+}
+.contenido{    
+    width:30% ;
+    height: 450px;
+    float:left;
+    margin-right: 12px;
+    margin-top: 10px;
+    padding: 9px;
+    box-shadow: 1px 1px 5px; /*Sombra*/
+    font-size: small;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-align: justify;
+    background-color: rgb(238, 222, 195);
+}
+#pie-de-pagina{
+    background-color: rgb(238, 222, 195);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 920px;
+    border-radius: 0px 0px 15px 15px; /*Borde curvado*/
+    clear: both;
+    float: none;
+    color : rgb(231, 97, 67);
+    padding: 20px;
+}
+/*---------------------------------------------------------------------------------------------------------*/
+body{
+    background-color: rgb(46, 160, 160);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(47, 7, 5); 
+}
+h1,h2{
+    text-align: center;
+}
+.logotipo{  
+    height: 150px;
+}
+.imagen{
+    height: 280px;
+}
+
+a:hover {
+    color:rgb(231, 97, 67);
+    text-decoration: none;
+}
+a:link {
+    color: rgb(231, 97, 67);
+    text-decoration: none;
+}
+  
+a:visited {
+    color: rgb(231, 97, 67);
+    text-decoration: none;
+}
+a:active {
+    color: rgb(231, 97, 67);
+    text-decoration: none;
+
+}
+
+/* DISEÑO MENU----------------------------------------------------------------------------------------------*/
+ul.menu-ul li ul { 
+    list-style: none ;  /*Sin simbolos */
+}
+ul.menu-ul{ 
+    list-style: none ; 
+    margin: 0;
+    padding: 0;
+}
+ul.menu-ul li{
+    float : left;
+}
+ul.menu-ul li ul li{
+    float :none;
+}
+ul.menu-ul li a {
+    background-color: rgb(47, 7, 5);
+    color: rgb(253, 242, 225);
+    text-decoration: none;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    text-align: left;
+}
+ul.menu-ul li a:hover {
+    background-color:rgb(47, 7, 5);
+}
+ul.menu-ul li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+ul.menu-ul li:hover ul {
+    display:block;
+}
+ul.menu-ul li ul li {
+    position:relative;
+}
+ul.menu-ul li ul li ul {
+    right:-140px;
+    top:0px;
+}

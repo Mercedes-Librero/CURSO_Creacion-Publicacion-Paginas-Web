@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es"> 
+
+	<head>  <!--Configuracion pagina-->
+		<!-- <!DOCTYPE html>-> HTML5  -->
+		<!--ltr= se lee de izq a der; lenguaje español-->
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+		<meta charset='UTF-8'/> <!-- ASCII España -->
+
+		<meta name="description" content="PAGINA MARAVILLOSA">
+		<meta name="keywords" content="programadora, web, superior">
+		<meta name="autor" content="MERCEDES LIBRERO MARTIN">		
+		<meta name="copyright" content="dueño web">	
+		
+		<title>Examen Formulario 2</title> <!--PESTAÑA NAVEGADOR-->
+
+        <style>
+            label, input{
+                font-size: 20px;
+            }
+            .principal{
+                width: 80%;
+                margin-top: 50px;
+                margin-left: auto;
+                margin-right:auto;         
+            }
+            tr{
+                height: 55px;  
+            }
+            .textoAbajo{
+                vertical-align: bottom;
+            }
+        </style> 
+	</head>
+	
+	<body>
+        <div class="principal">	
+            <form method="post" action="https://www.dfa-for.com/resources/tests/test_post.php">
+                <table>
+                    <tr>
+                        <td class="textoAbajo">
+                            <label id="usuario" name="usuario">Usuario: (*)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="usuario" name="usuario" size="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textoAbajo">
+                            <label id="nombre" name="nombre">Nombre: (*)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="nombre" name="nombre" size="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textoAbajo">
+                            <label id="apellidos" name="apellidos">Apellidos: (*)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="apellidos" name="apellidos" size="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textoAbajo">
+                            <label id="correo" name="correo">E-mail: (*)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="correo" name="correo" size="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textoAbajo">
+                            <label id="clave" name="clave">Contraseña: (*)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="clave" name="clave" size="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="textoAbajo">
+                            <label id="claveConf" name="claveConf">Confirmar Contraseña: (*)</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="claveConf" name="claveConf" size="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <input type="submit" value="Enviar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>	        
+	</body>
+	
+</html>

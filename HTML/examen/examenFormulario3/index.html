@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es"> 
+
+	<head>  <!--Configuracion pagina-->
+		<!-- <!DOCTYPE html>-> HTML5  -->
+		<!--ltr= se lee de izq a der; lenguaje español-->
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+		<meta charset='UTF-8'/> <!-- ASCII España -->
+
+		<meta name="description" content="PAGINA MARAVILLOSA">
+		<meta name="keywords" content="programadora, web, superior">
+		<meta name="autor" content="MERCEDES LIBRERO MARTIN">		
+		<meta name="copyright" content="dueño web">	
+		
+		<title>Examen Formulario 3</title> <!--PESTAÑA NAVEGADOR-->
+
+        <style>
+            body, select, input{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20px;
+            }
+			tr{
+				height: 50px;
+			}
+            table{
+                width: 100%;
+                padding-left: 10px; 
+                padding-right:10px;
+            }
+            .alinear {
+                text-align: right;
+            }
+
+            .principal{
+                width: 90%;        
+            }
+        </style> 
+	</head>
+	
+	<body>
+        <h1>REGISTRO MANUAL</h1>
+        <div class="principal">	
+            <form method="post" action="https://www.dfa-for.com/resources/tests/test_post.php">
+                <table>
+					<tr>
+						<td class="alinear">Nombre y apellidos : </td>
+						<td colspan="3">
+							<input type="text" name="nombre" id="nombre" size="60"> *
+						</td>
+					</tr>
+					<tr>
+						<td class="alinear">País : </td>
+						<td colspan="3">
+							<select id="pais" name="pais" style="width: 740px;"> 
+								<option value="Francia">Francia</option>
+								<option value="España" selected>España</option>
+								<option value="ReinoUnido">Reino Unido</option>
+								<option value="Portugal">Portugal</option>
+							</select> * &#10004;
+						</td>
+					</tr>
+					<tr>
+						<td class="alinear">Nombre de la Entidad : </td>
+						<td colspan="3">
+							<input type="text" name="entidad" id="entidad" size="60"> *
+						</td>
+					</tr>
+					<tr>
+						<td class="alinear">E-mail : </td>
+						<td colspan="3">
+							<input type="text" name="correo" id="correo" size="60"> *
+						</td>
+					</tr>
+					<tr>
+						<td class="alinear">Nombre de usuario : </td>
+						<td colspan="3">
+							<input type="text" name="usuario" id="usuario" size="60"> *
+						</td>
+					</tr>
+					<tr>
+						<td class="alinear">Contraseña : </td>
+						<td>
+							<input type="text" name="clave" id="clave" size="16"> *
+						</td>
+						<td class="alinear">Confirmar Contraseña : </td>
+						<td>
+							<input type="text" name="clave-conf" id="clave-conf" size="15"> *
+						</td>						
+					</tr>
+					<tr>
+						<td colspan="4" class="alinear">Ninguno (0%) &nbsp;&nbsp; </td>
+					</tr>
+					<tr>
+						<td class="alinear">Pregunta de seguridad : </td>
+						<td colspan="3">
+							<select id="pregunta" name="pregunta" style="width: 740px;"> 
+								<option value="Francia">¿Cuál es tu apodo?</option>
+								<option value="España" selected>¿Cual es tu mascota?</option>
+								<option value="Portugal">¿Cual es tu ciudad de nacimento?</option>
+							</select> * &#10004;
+						</td>
+					</tr>
+					<tr>
+						<td class="alinear">Respuesta de seguridad : </td>
+						<td colspan="3">
+							<input type="text" name="respuesta" id="respuesta" size="60"> *
+						</td>
+					</tr>
+					<tr>
+						<td class="alinear">Teléfono móvil de seguridad : </td>
+						<td>
+							<select id="numPais" name="numPais" style="width: 100px;"> 
+								<option value="34">34</option>
+								<option value="35" selected>35</option>
+								<option value="36">36</option>
+							</select>
+						</td>
+						<td colspan="2">
+							<input type="text" name="movil" id="movil" size="38"> *
+						</td>
+					</tr>
+					<tr>
+						<td class="alinear">Zona Horaria : </td>
+						<td colspan="3">
+							<select id="zona" name="zona" style="width: 740px;"> 
+								<option value="Pacific/Midway">(UTC -11:00) Midway, Niue, Pago Pago</option>
+								<option value="America/Adak" selected>(UTC -10:00) Adak</option>
+								<option value="Pacific/Fakaofo"> (UTC -10:00) Fakaofo, Honolulu, Johnston, Rarotonga, Tahiti</option>
+							</select> * &#10004;
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4" align="center">
+							<input type="submit" value="Enviar">
+						</td>
+					</tr>   							
+                </table>
+            </form>
+        </div>	        
+	</body>
+	
+</html>
