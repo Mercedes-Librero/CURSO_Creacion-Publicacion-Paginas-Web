@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario</title>
+<script src="javaScript.js"></script>
+</head>
+
+<body>
+  <h1>Formulario</h1>
+  <h2>Prueba verificación datos</h2>
+<table>
+  <tr height="50px">
+    <td>Nombre</td>
+    <td><input type="text" id="nombre" name="nombre" onBlur="comprobar('nombre')" onFocus="limpiar('nombre')"></td>
+    <td><p id="msg_nombre"></p></td>
+  </tr> 
+  <tr height="50px">
+    <td>Apellidos</td>
+    <td><input type="text" id="apellidos" name="apellidos" onBlur="comprobar('apellidos')" onFocus="limpiar('apellidos')"></td>
+    <td><p id="msg_apellidos"></p></td>
+  </tr>  
+  <tr height="50px">
+    <td>Telefono</td>
+    <td><input type="text" id="telefono" name="telefono" onBlur="comprobar('telefono')" onFocus="limpiar('telefono')"></td>
+    <td><p id="msg_telefono"></p></td>
+  </tr>         
+  <tr height="50px">
+    <td>Email</td>
+    <td><input type="text" id="mail" name="mail" onBlur="comprobar('mail')" onFocus="limpiar('mail')"></td>
+    <td><p id="msg_mail"></p></td>
+  </tr>
+  <tr height="50px">
+    <td>Comentario</td>
+    <td>
+      <textarea id="texto" name="texto"  maxleng="10"></textarea>
+    </td>  
+    <td><p id="msg_mail"></p></td>
+  </tr>  
+  <tr height="50px">
+    <td>Seleciones su avatar</td>
+    <td>
+      <input type="file" id="archivo" style="display: none">
+      <input type="button" value="Subir archivo" onClick="document.getElementById('archivo').click();">
+    </td>  
+    <td><p id="msg_mail"></p></td>
+  </tr>    
+  <tr height="50px">
+    <td>Acepto</td>
+    <td><input type="checkbox" id="condiciones" onchange="verificar_checkacepto()"></td>
+    <td><p id="msg_mail"></p></td>
+  </tr>     
+</table>
+<input type=button value="Enviar" style="visibility: hidden" id="boton">
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html dir="ltr" lang="es">
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+  <script src="js/jquery.js"></script>
+</head>
+
+<body>
+<article>
+    <h2>Nos muestra una cadena dividida por los espacios</h2>
+    <p id="alertas"></p>
+
+    <br> 
+    <h2>Busca la imagen que corresponde al archivo buscado</h2>   
+    <input type="file" id="miArchivo" name="miArchivo">
+    <div id="mensajes"></div>
+    <input type="button" value="Comprobar" onClick="verificarFile()">
+    <br>
+    <hr>
+    <br>
+    <h2>Nos da una muestra de la imagen elegida y comprueba que sea imagen</h2>
+    <img src="images/iconos/sinarchivo.png" id="imagen_file" alt="" height="150">
+	  <input type="file" id="btn_file">
+    <br>
+    <hr>
+    <br>	
+    <h2>Formulario enviar archivo</h2>  
+	  	<form name="formTest" 
+				enctype="multipart/form-data" 
+				method="post" 
+				id="formTest" 
+				action="https://www.dfa-for.com/resources/tests/test_post.php">
+		<input type="file" id="btn_file" name="btn_file">
+		<input type="text" id="dato" name="dato" value="Hola...">
+		<input type="submit" value="Enviar...">
+	</form>
+ 
+  <script>
+    //dividimos por espacios////////////////////////////////////////////////////////  
+    var miDato = 'Hola, amigos míos';
+    var miMatriz = miDato.split(' '); 
+    
+    miMatriz.forEach(
+      function(dato){
+        //alert(dato);
+        $('#alertas').append(dato+'<hr>');
+      }
+    );
+    
+     // con el boton buscamos extension archivo del cliente ///////////////////////////////////////  
+    function verificarFile(){
+      var archivo = document.getElementById('miArchivo').files[0].name;
+          var miMatriz2 = archivo.split('.');
+    var ultimo = miMatriz2.length - 1   
+      
+      
+      var arrayArchivo = archivo.split('.');
+      ultimo = arrayArchivo.length - 1;
+      
+      document.getElementById('mensajes').innerHTML = '<br> <img src="images/iconos/' + arrayArchivo[ultimo]  + '.png"><br> ';
+    }
+   
+    // con onChange del FILE
+    $('#miArchivo').change(function(){
+      verificarFile();
+      }
+    );    
+    
+    		//Asignamos las extensiónes que serán válidas
+		var extFiles = ['.jpg', '.jpeg', '.png', '.pdf', '.docx', '.pptx', '.ppsx', 
+										'.xlsx', '.xlsm','.zip', '.rar', '.mp4', '.avi', '.accdb', 
+										'.bmp', '.mp3', '.txt', '.wmv'
+                    ];
+		//Asignamos los nombres de las imágenes en miniatura
+		var pngImages = ['jpg.png', 'jpeg.png', 'png.png', 'pdf.png', 'docx.png', 
+										 'pptx.png', 'ppsx.png','xlsx.png', 'xlsm.png', 'zip.png', 
+										 'rar.png', 'mpeg.png', 'avi.png', 'accdb.png',
+										 'bmp.png', 'mp3.png', 'text.png', 'vmw.png'
+										]
+		
+		
+		
+		$('#btn_file').change(
+			function(e){
+				var fileSeleccionado = document.getElementById('btn_file').files[0].name
+				var matriz = fileSeleccionado.split('.');
+				var extension = '.' + matriz[matriz.length -1];
+				var posicion = extFiles.indexOf(extension);
+				
+				if(posicion < 0){
+					$('#imagen_file').attr('src', 'images/iconos/prohibido.png' );
+					return false; 
+				} else {
+					$('#imagen_file').attr('src', 'images/iconos/' + pngImages[posicion] );
+				}
+				
+				if(posicion >= 0 && posicion <= 2){
+					$('#imagen_file').attr('src', URL.createObjectURL(e.target.files[0]) );					 
+			  }
+			}		
+		);
+  </script>
+
+</article>
+</body>
+</html>

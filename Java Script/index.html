@@ -1,0 +1,85 @@
+<!doctype html>
+<html dir="ltr" lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Documento sin título</title>
+  <script src="javaScript.js"></script>
+  <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <h1>Hola...</h1>
+    <div id="fechahora"> </div>
+    <div id="fechahora2"> </div>
+     
+    <script>
+      //setInterval y setTimeout utilizan FUNCIONES ANONIMAS
+      setInterval(
+        function(){
+          document.getElementById('fechahora').innerHTML=fn_fecha();
+        },900);
+        
+      setTimeout(
+        function(){
+            document.getElementById('fechahora2').innerHTML=fn_fecha();
+        },900);
+    </script>     
+    
+    <h1>Esto es un H1 después del script...</h1>
+    <hr>
+    
+    <table>
+      <tr>
+        <td>Movil</td>
+        <td><input type="text" id="movil"></td>
+      </tr>     
+      <tr>
+        <td>Nueva contraseña</td>
+        <td><input type="password" id="nueva_pass"></td>
+      </tr>
+      <tr>
+        <td>Nueva contraseña</td>
+        <td><input type="password" id="repite_pass"></td>
+      </tr>      
+    </table>
+    
+    <input type="button" value="Confirmar..." onClick="fn_verificarpass()"><br><br>
+    <div id="msgbox_alertas"></div>
+    <hr>
+    <a href="formulario.html">Ejemplo formulario</a>
+    <hr>
+    <a href="formulario2.html">Ejemplo formulario 2</a>
+    <hr>   
+    <a href="formulario3.html">Ejemplo formulario 3</a>
+    <hr>    
+    <a href="jQuery.html">Ejemplos jQuery</a>
+    <hr>     
+    <a href="jQueryImg.html">Imagenes jQuery</a>
+    <hr>     
+    <a href="split.html">Split jQuery</a>
+    <hr>  
+    <a href="JQUERYindexOf.html">indexOf jQuery</a>
+    <hr>    
+    <a href="cookies.php">Cookies</a>
+    <hr>               
+</body>
+ 
+ 
+  <script>
+    document.write('contador 1' + '<br>');
+    
+    var contador=0;
+    
+    while(contador<10){
+      document.write(contador+'<br>');
+      contador= contador+1;
+      contador = prompt('Intruduzca un numero');
+    }
+    
+    
+    document.write('<br>' + 'contador 2' + '<br>');    
+    for (contador=0; contador<10; contador++){
+      document.write(contador+'<br>');
+    }
+  </script>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="javaScript.js"></script>
+<script src="js/jquery.js"></script>
+<style>
+tr {
+  height: 50px;
+}
+div {
+  font-size: 11px;
+  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana, " sans-serif";
+}
+</style>
+</head>
+
+<body>
+<h1>Datos del alumno</h1>
+<hr>
+<articre>
+  <form>
+    <table width="50%" border="0px">
+      <tr>
+        <td width="20%"><label>NIF/NIE*: </label></td>
+        <td><input type="text" size="8px" id="num_dni" name="num_dni" 
+          onKeyPress="if (event.keyCode<45 || event.keyCode>57) event.returnValue=false"
+           onFocus="$('#msg_DNI').slideDown();" onBlur="$('#msg_DNI').slideUp();">
+          -
+          <input type="text" size="1px" id="let_dni" name="let_dni"
+                 onFocus="$('#msg_DNI').slideDown();" onBlur="$('#msg_DNI').slideUp();"></td>
+        <td><div id="msg_DNI">Campos obligatiorios</div></td>
+      </tr>
+      <tr>
+        <td><label>Nombre*: </label></td>
+        <td><input type="text" id="nombre" name="nombre"
+                   onFocus="$('#msg_Nom').slideDown();"
+            onBlur="$('#msg_Nom').slideUp();"></td>
+        <td><div id="msg_Nom">Campo obligatiorio</div></td>
+      </tr>
+      <tr>
+        <td><label>Apellido 1*: </label></td>
+        <td><input type="text" id="apellido1" name="apellido1"
+                   onFocus="$('#msg_Ape').slideDown();" onBlur="$('#msg_Ape').slideUp();"></td>
+        <td><div id="msg_Ape">Campo obligatiorio</div></td>
+      </tr>
+      <tr>
+        <td><label>Apellido 2: </label></td>
+        <td><input type="text" id="apellido2" name="apellido2"
+        onFocus="$('#msg_Ape2').slideDown();" onBlur="$('#msg_Ape2').slideUp();"></td>
+        <td><div id="msg_Ape2">Solo Texto</div></td>
+      </tr>
+      <tr>
+        <td><label>Sexo*: </label></td>
+        <td><input type="radio" name="sexo" value="Mujer"
+                onFocus="$('#msg_sexo').slideDown();" onBlur="$('#msg_sexo').slideUp();">
+          Mujer
+          <input type="radio" name="sexo" value="Hombre" onFocus="$('#msg_sexo').slideDown();" onBlur="$('#msg_sexo').slideUp();">
+          Hombre </td>
+        <td><div id="msg_sexo">Elija una opción</div></td>
+      </tr>
+      <tr>
+        <td><label>F.Nacimiento*: </label></td>
+        <td><input type="datetime-local" id="nacimiento" onFocus="$('#msg_nac').slideDown();" onBlur="$('#msg_nac').slideUp();">
+          (dd/mm/aaaa) (día/mes/año) </td>
+        <td><div id="msg_nac">Campo obligatorio</div></td>
+      </tr>
+      <tr>
+        <td><label>Discapacidad*: </label></td>
+        <td><input type="radio" name="discapacidad" value="Si" onFocus="$('#msg_disc').slideDown();" onBlur="$('#msg_disc').slideUp();">
+          Si
+          <input type="radio" name="discapacidad" value="No" onFocus="$('#msg_disc').slideDown();" onBlur="$('#msg_disc').slideUp();">
+          No </td>
+        <td><div id="msg_disc">Elija una opción</div></td>
+      </tr>
+      <tr>
+        <td ><label>Provincia*: </label></td>
+        <td><select id="provincia" name="provincia" onFocus="$('#msg_prov').slideDown();" onBlur="$('#msg_prov').slideUp();">
+            <option value="">Seleciona</option>
+            <option value="Ávila">Ávila</option>
+            <option value="Badajoz">Badajoz</option>
+            <option value="Islas Baleares">Islas Baleares</option>
+            <option value="Barcelona">Barcelona/option>
+            <option value="Burgos">Burgos</option>
+            <option value="Cáceres">Cáceres</option>
+          </select></td>
+        <td><div id="msg_prov">Elija una opción</div></td>
+      </tr>
+      <tr>
+        <td><label>CP*: </label></td>
+        <td><input type="text" id="cp" name="cp" onFocus="$('#msg_cp').slideDown();" onBlur="$('#msg_cp').slideUp();"></td>
+        <td><div id="msg_cp">Campo obligatiorio</div></td>
+      </tr>
+      <tr>
+        <td><label>Móvil*: </label></td>
+        <td><input type="text" id="movil" name="movil" onFocus="$('#msg_movil').slideDown();" onBlur="$('#msg_movil').slideUp();"></td>
+        <td><div id="msg_movil">Campo obligatiorio</div></td>
+      </tr>
+      <tr>
+        <td><label>E-mail*: </label></td>
+        <td><input type="text" id="correo" name="correo" onFocus="$('#msg_correo').slideDown();"
+                 onBlur="$('#msg_correo').slideUp();"></td>
+        <td><div id="msg_correo">Campo obligatiorio</div></td>
+      </tr>
+      <tr>
+        <td style="vertical-align: top"><label>Estudios*: </label></td>
+        <td><div id="ide_chechbox" 
+        onMouseOver="$('#msg_estudios').slideDown();" onMouseOut=$('#msg_estudios').slideUp();>
+         <input type="checkbox" name="estudios" value="Sin Estudios">
+          Sin estudios<br>
+          <input type="checkbox" name="estudios" value="Estudios Primarios" >
+          Estudios Primarios<br>
+          <input type="checkbox" name="estudios" value="Graduado Escolar" >
+          Graduado Escolar<br>
+          <input type="checkbox" name="estudios" value="ESO" >
+          ESO<br>
+          <input type="checkbox" name="estudios" value="BUP/COU Bachillerato" >
+          BUP/COU Bachillerato<br>
+          <input type="checkbox" name="estudios" value="FP I" >
+          FP I<br>
+          <input type="checkbox" name="estudios" value="FP II" >
+          FP II<br>
+          <input type="checkbox" name="estudios" value="Ciclo Grado Medio" >
+          Ciclo Grado Medio<br>
+          <input type="checkbox" name="estudios" value="Ciclo Grado Superior">
+          Ciclo Grado Superior<br>
+          <input type="checkbox" name="estudios" value="Diplomatura">
+          Diplomatura<br>
+          <input type="checkbox" name="estudios" value="Licenciatura">
+          Licenciatura<br>
+          <input type="checkbox" name="estudios" value="Grado Universitario">
+          Grado Universitario<br>
+          </div></td>
+        <td><div id="msg_estudios">Elija opcines</div></td>
+      </tr>
+    </table>
+  </form>
+</articre>
+<input type="button" value="Enviar Preinscripción" onClick="comprobarFormulario();">
+</body>
+<script>
+  /*Ocultamos todos los mensajes de los DIV, luego apareceran cuando hagamos click en el campo de texto*/
+  $('#msg_DNI').slideUp();
+  $('#msg_Nom').slideUp();
+  $('#msg_Ape').slideUp();
+  $('#msg_Ape2').slideUp();
+  $('#msg_sexo').slideUp();
+  $('#msg_nac').slideUp();
+  $('#msg_disc').slideUp();
+  $('#msg_prov').slideUp();  
+  $('#msg_cp').slideUp();
+  $('#msg_movil').slideUp();
+  $('#msg_correo').slideUp();
+  $('#msg_estudios').slideUp();    
+</script>
+</html>

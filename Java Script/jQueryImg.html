@@ -1,0 +1,121 @@
+<!doctype html>
+<html dir="ltr" lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Documento sin título</title>
+  <script src="js/jquery.js"></script>
+  
+  <style>
+    .id_menu{
+      margin-right: 12px;
+      float:left;
+      top: 10px;
+      left: 10px;
+      height: 200px;
+      width: 200px;
+      background: #045A03;
+    }
+    .cl_menu{
+      margin-left: 10px;
+      margin-top: 10px;
+      float:left;
+      background: #C0F3C8;
+      top: 10px;
+      left: 10px;        
+      height: 20px;
+      width: 150px;
+      vertical-align: middle;
+      padding: 9px;
+    }
+    #id_foto{
+      float:left;
+      margin-right: 12px;
+      border: solid 2px #000000;
+      height: 500px;
+      width: 800px;
+    justify-content: center;
+    } 
+    
+    .cl_img{
+      width: 200px;
+    }
+  </style>
+  
+  
+  
+</head>
+
+<body> 
+   <div class="id_menu" id="menu_izq">
+    <div class="cl_menu" id="ensalada1">Ensalada uno</div>
+    <div class="cl_menu" id="ensalada2">Ensalada dos</div>
+    <div class="cl_menu" id="ensalada3">Ensalada tres</div>
+   </div>
+  <div id="id_foto" >
+  </div>
+        
+   <div class="id_menu" id="menu_der">
+    <div class="cl_menu" id="ensalada1D">Ensalada uno</div>
+    <div class="cl_img" id="ensal_oculto1" style="display:none !important;">
+      <img src="images/ensaladas/ensaladaarroz.jpg" width="200px"> 
+    </div>
+    <div class="cl_menu" id="ensalada2D">Ensalada dos</div>
+    <div class="cl_img" id="ensal_oculto2" style="display:none !important;">
+      <img src="images/ensaladas/garbanzos.jpg" width="200px"> 
+    </div>
+    <div class="cl_menu" id="ensalada3D">Ensalada tres</div>
+    <div class="cl_img" id="ensal_oculto3" style="display:none !important;">
+      <img src="images/ensaladas/lentejas.jpg" width="200px"> 
+    </div>    
+   </div>        
+        
+</body>
+ 
+  <script>
+    /*Funciones menu de la izquierda*/
+    $('#ensalada1').mouseover(
+      function(){
+        $('#id_foto').html('<img src="images/ensaladas/ensaladaarroz.jpg">');
+      }
+    )
+    
+    $('#ensalada2').mouseover(
+      function(){
+        $('#id_foto').html('<img src="images/ensaladas/garbanzos.jpg">');
+      }
+    )
+    
+    $('#ensalada3').mouseover(
+      function(){
+        $('#id_foto').html('<img src="images/ensaladas/lentejas.jpg">');
+      }
+    )    
+      $('.cl_menu').mouseout(
+      function(){
+        $('#id_foto').html('');
+        $('.cl_img').slideUp();
+        $('#menu_der').css("height", "200px");
+      }
+    )
+      
+     /*Funciones menu de la derecha*/
+    $('#ensalada1D').mouseover(
+      function(){
+        $('#ensal_oculto1').slideDown(1000);
+        $('#menu_der').css("height", "300px");
+      }
+    ) 
+    $('#ensalada2D').mouseover(
+      function(){
+        $('#ensal_oculto2').slideDown(1000);
+        $('#menu_der').css("height", "300px");
+      }
+    ) 
+    $('#ensalada3D').mouseover(
+      function(){
+        $('#ensal_oculto3').slideDown(1000);
+        $('#menu_der').css("height", "300px");
+      }
+    )     
+  </script>
+</html>

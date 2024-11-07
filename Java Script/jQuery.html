@@ -1,0 +1,30 @@
+<!doctype html>
+<html dir="ltr" lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Documento sin título</title>
+  <script src="js/jquery.js"></script>
+</head>
+
+<body>
+
+      <p id="posX">?</p>
+      <p id="posY">?</p>
+
+      <div id="seguimiento" style="position: relative; top:-270px !important; left: 150px !important;">
+         <img src="images/correcto.png" width="50px">    
+      </div>
+        
+</body>
+ 
+  <script>
+    $(document).mousemove (
+      function(datos){
+        $('#posX').text(datos.pageX);
+        $('#posY').text(datos.pageY);
+        $('#seguimiento').css("top",datos.pageY - 520);
+        $('#seguimiento').css("letf",datos.pageX - 85);
+      }
+    );
+  </script>
+</html>
