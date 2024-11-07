@@ -1,0 +1,111 @@
+/* Created by Artisteer v4.3.0.60745 */
+
+.dfa-header, #dfa-header-bg, .dfa-layout-cell, .dfa-layout-wrapper, .dfa-footer, .dfa-nav, #dfa-hmenu-bg, .dfa-sheet,
+.clearfix {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+
+.dfa-textblock > div {
+   display: block;
+   line-height: normal;
+   zoom: 1;
+}
+
+.dfa-header
+{
+   z-index: 1;
+   background-image: [headerimage];
+   background-position: [headerposition];
+}
+
+#dfa-header-bg 
+{
+   display: none;
+}
+
+.dfa-hmenu>li, .dfa-hmenu>li>a
+{
+   display: inline !important;
+   zoom: 1;
+   float: none !important;
+   vertical-align: top;
+}
+ul.dfa-hmenu, ul.dfa-hmenu ul {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+#dfa-hmenu-bg 
+{
+   display: none;
+}
+
+ul.dfa-hmenu>li:first-child {
+   padding-right:0;
+}
+
+ul.dfa-hmenu ul{
+   background-color: #647687 !important;
+}
+
+.dfa-content-layout, .dfa-content-layout-row, .dfa-layout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.dfa-layout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+
+input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+* html input[type="text"]
+{
+   margin :0;
+}
+
+form.dfa-search>input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+form.dfa-search div>input[type="text"]
+{
+   width: 100%;
+}
+
+* html form.dfa-search>input[type="text"] 
+{
+   margin :0;
+}
+
+form.dfa-search
+{
+   zoom: 1;
+}
+.dfa-postheadericons span{
+   zoom: 1;
+}
+.dfa-postcontent {
+   height: 1%;
+}
+
+.close-alt, .arrow-right-alt, .arrow-left-alt {
+   display: block !important;
+}
+.cw, .ccw {
+   display: none !important;
+}
+
+.dfa-content 
+{
+   width: auto;
+   float:none;
+}
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es"> 
+<head>
+  <!-- Created by Artisteer v4.3.0.60745 -->
+  <meta charset="utf-8">
+  <title>Reservas</title>
+  <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+  <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="stylesheet" href="css/style.css" media="screen">
+  <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+  <link rel="stylesheet" href="css/style.responsive.css" media="all">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script.responsive.js"></script>
+  <script src="js/privado.js"></script>
+  
+  <style>
+    .dfa-content .dfa-postcontent-0 .layout-item-0 {
+      padding: 0px;
+    }
+    .ie7 .dfa-post .dfa-layout-cell {
+      border: none !important;
+      padding: 0 !important;
+    }
+    .ie6 .dfa-post .dfa-layout-cell {
+      border: none !important;
+      padding: 0 !important;
+    }
+    
+    table.tablaFormulario td{
+      vertical-align: middle; !important;
+    }
+  </style>
+</head>
+
+<body>
+<div id="dfa-main">
+  <header class="dfa-header">
+    <div class="dfa-shapes"> </div>
+    <h1 class="dfa-headline"> <a href="/">La Parrilla</a> </h1>
+    <h2 class="dfa-slogan">Restaurant</h2>
+    <nav class="dfa-nav">
+      <ul class="dfa-hmenu">
+        <li><a href="inicio.html" class="">Inicio</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="dfa-sheet clearfix">
+    <div class="dfa-layout-wrapper">
+      <div class="dfa-content-layout">
+        <div class="dfa-content-layout-row">
+          <div class="dfa-layout-cell dfa-content">
+            <article class="dfa-post dfa-article">
+              <h2 class="dfa-postheader" style="text-align: center">Reservas</h2>
+              <div class="dfa-postcontent dfa-postcontent-0 clearfix">
+                <div class="dfa-content-layout">
+                  <div class="dfa-content-layout-row">
+                    <div class="dfa-layout-cell layout-item-0" style="width: 100%" >
+                      <p>Debido a la pandemia de COVID19 es imprescindible realizar reserva previa a través de esta página, rellenando el formulario de reserva que mostramos a continuación.</p>
+                      <h2>Formulario de reservas</h2>
+                      <form name="mi_form" id="mi_form" method="post" onSubmit="return fn_verificacionfinal();"
+                          action="https://www.dfa-for.com/resources/tests/test_post.php">                      
+                      <table border="0px" class="tablaFormulario">
+                        <tr>
+                          <td>Nombre y Apellidos</td>
+                          <td><input type="text" name="nombre" id="nombre" size="40px" onBlur="fn_veritext(this.id, 3);"></td>
+                          <td><img src="images/exclamation.png" id="imagen_nombre"></td>  
+                          <td><label>Telefono</label></td>
+                          <td>
+                              <input type="text" name="telefono" id="telefono" size="10px" maxlength="9" 
+                              onBlur="fn_verinum(this.id, 600000000, 699999999);">
+                          </td>      
+                          <td><img src="images/exclamation.png" id="imagen_telefono"></td>                                 
+                        </tr>
+                        <tr>
+                          <td><label>Fecha y Hora</label></td>
+                          <td><input type="datetime-local" id="fecha" name="fecha" onBlur="comprobarFecha(this.id)">
+                            <label id="div_errores" style="font-size: 9px; color: brown;"></label>
+                          </td>
+                          <td><img src="images/exclamation.png" id="imagen_fecha"></td>               
+                          <td><label>Comensales</label></td>
+                          <td>
+                            <input type="text" name="comensales" id="comensales" size="3px" maxlength="2"
+                            onBlur="fn_verinum(this.id, 1,20);"></td> 
+                          <td><img src="images/exclamation.png" id="imagen_comensales"></td>                                
+                        </tr>
+                        <tr>
+                          <td>Email</td>                         
+                          <td colspan="4">
+                            <input type="text" name="email" id="email" size="50px" onBlur="verificar_mail(this.value);">
+                          </td> 
+                          <td><img src="images/exclamation.png" id="imagen_email"></td>                     
+                        </tr>                        
+                        <tr>
+                          <td colspan="6"><textarea rows="7" cols="88">Comentario </textarea></td>
+                        </tr> 
+                        <tr><td colspan="6"><input type="submit" class="dfa-button" value="Reservar..."></td>                                                                        
+                        </tr>
+                      </table>
+                      <br>
+
+                      </form>
+                      
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="dfa-footer">
+      <div class="dfa-content-layout">
+        <div class="dfa-content-layout-row">
+          <div class="dfa-layout-cell layout-item-0" style="width: 30%">
+            <p>Síguenos en nuestras redes...</p>
+          </div>
+          <div class="dfa-layout-cell" style="width: 25%">
+            <p><img width="32" height="32" alt="" src="images/rss_32.png" class=""><img width="32" height="32" alt="" src="images/facebook_32.png" class=""><img width="32" height="32" alt="" src="images/twitter_32.png" class=""></p>
+          </div>
+          <div class="dfa-layout-cell" style="width: 45%">
+            <p style="text-align: right"><br>
+              Newsletter:&nbsp;
+              <input style="font-style: italic; font-size: 13px; width: 170px; height: 28px;color: #808080" value=" Enter email">
+              <a class="dfa-button" href="">Suscribirme</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <p class="dfa-page-footer"> <span id="dfa-footnote-links">Designed by <a href="www.genzor.es" target="_blank">José Manuel Genzor</a>.</span> </p>
+</div>
+</div></body>
+</html>
