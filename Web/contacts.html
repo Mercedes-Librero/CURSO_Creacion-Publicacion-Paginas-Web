@@ -1,0 +1,50 @@
+
+<div class="art-postcontent art-postcontent-0 clearfix">
+<div class="art-content-layout-wrapper layout-item-0">
+  <div class="art-content-layout layout-item-1">
+    <div class="art-content-layout-row">
+      <h2 style="text-align:center; color: #67836A;" >CONTACTO</h2>
+      <br>
+      <div class="art-sheet2">
+        <p>Ponte en contacto con nuestros asesores nutricionales para resolver cualquier duda o para enviarnos tus recetas.</p>
+        <h2>Formulario de contacto</h2>
+        <form name="mi_form" id="mi_form" method="post" onSubmit="return fn_verificacionfinal();"
+                          action="https://www.dfa-for.com/resources/tests/test_post.php">
+          <table border="0px" class="tablaFormulario" >
+            <tr>
+              <td>Nombre y Apellidos</td>
+              <td><input type="text" name="nombre" id="nombre" size="40px" onBlur="fn_veritext(this.id, 3);"></td>
+              <td><img src="images/exclamation.png" id="imagen_nombre"></td>
+              <td><label>Movil</label></td>
+              <td><input type="text" name="telefono" id="telefono" size="10px" maxlength="9" 
+                              onBlur="fn_verinum(this.id, 600000000, 699999999);"></td>
+              <td><img src="images/exclamation.png" id="imagen_telefono"></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td colspan="4"><input type="text" name="email" id="email" size="50px" onBlur="verificar_mail(this.value);"></td>
+              <td><img src="images/exclamation.png" id="imagen_email"></td>
+            </tr>
+            <tr>
+              <td colspan="6"><textarea rows="7" cols="88">Mensaje </textarea></td>
+            </tr>
+            <tr>
+              <td colspan="6"><input type="submit" value=" Enviar " class="art-button"></td>
+            </tr>
+          </table>
+          <br>
+        </form>
+        <h2>Asesores nutricionales</h2>
+        <p>Avenida Cataluña, 158<br>
+          CP 50014, España </p>
+        <p><a href="http://www.NutritionConsultants.com">Pagina web</a><br>
+          <a href="mailto:myemail@NutritionConsultants.com">Correo electronico</a></p>
+        <p><br>
+        </p>
+        <div id="mapa"><a href="#" onClick="fn_verMapa()">Donde estamos</a></div>        
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
