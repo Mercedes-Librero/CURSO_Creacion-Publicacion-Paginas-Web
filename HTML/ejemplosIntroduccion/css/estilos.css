@@ -1,0 +1,68 @@
+/* HOJA DE ESTILOS*/
+/*
+    body { } --> Modificacion de la entidad
+
+    .mi_clase { } --> Creacion de una clase universal
+
+    #mi-elemento { }  --> Creacion de clase para un unico elemento (ID)
+
+    body.mi_clase { } --> creacion de clase para una entidad HTML
+
+    table.mi_clase td { }  --> se aplica a los TD solo de table que tenga es clase
+
+    table.mi_clase td p  { }  --> se aplica a los P que estan el los TD solo de table que tenga es clase
+
+    */
+
+body{
+    background-color: rgb(193, 193, 212);
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    margin: 5px;
+}
+h1{
+    color: rgb(161, 153, 76);
+    text-align: center;
+    border: rgb(109, 97, 9) solid 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+h2{
+    color: rgb(161, 153, 76);
+}
+h3,h4 {
+    text-align: right;
+    color: rgb(161, 153, 76);
+}
+p{
+    font-size: 15px;
+    text-align: center;
+}
+
+/*                                              C L A S E S
+ conjunto de intruciones ajustes de estilo que se puede aplicar a cualquier entidad HTML*/
+
+ .miclase{
+     color: red;
+     font-size: 10px;
+     text-align: right;
+ }
+
+ /*Clases ejercicio del tren*/
+ .claseTren{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(10, 10, 150);
+    background-color: aliceblue;
+    font-size: 15px;
+    margin: 50px;
+ }
+ .claseColorH{
+     color: rgb(11, 11, 56);
+     text-align: left;
+     border: 0px;
+     box-shadow: 0 0 5px rgba(51, 84, 173, 0.7); 
+ }
+ .box {   
+     box-shadow: 0 0 40px rgba(51, 84, 173, 0.7); 
+ 
+    }

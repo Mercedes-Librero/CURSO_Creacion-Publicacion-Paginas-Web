@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es"> 
+
+	<head>  <!--Configuracion pagina-->
+		<!-- <!DOCTYPE html>-> HTML5  -->
+		<!--ltr= se lee de izq a der; lenguaje español-->
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+
+		<meta charset='UTF-8'/> <!-- ASCII España -->
+
+		<meta name="description" content="PAGINA MARAVILLOSA">
+		<meta name="keywords" content="programadora, web, superior">
+		<meta name="autor" content="MERCEDES LIBRERO MARTIN">		
+		<meta name="copyright" content="dueño web">	
+		
+		<title>Formulario</title> <!--PESTAÑA NAVEGADOR-->
+	</head>
+	
+	<body>		
+		<h1>CONTACTO</h1>
+		<hr>  <!--
+		
+		<form method="post" action="https://www.dfa-for.com/resources/tests/test_post.php">-->
+		<form method="get" action="https://www.dfa-for.com/resources/tests/test_get.php">
+			<p>
+				<label for="nombre">Nombre: </label>
+				<input type="text" id="nombre" name="nombre">
+			</p>
+			<p>
+				<label for="edad">Edad: </label>
+				<input type="text" id="edad" name="edad" maxlength="2"  style="width:35px;">
+			  </p>
+			<p>
+				<label for="clave">Contraseña: </label>
+				<input type="password" id="clave" name="clave">
+			</p>	
+			<p>
+				<textarea id="comentarios" name="comentarios" cols="55" rows="7">adfssdfsdf</textarea>
+			</p>			
+			<p>
+				<label for="fecha">Fecha: </label>
+				<input type="date" id="fecha" name="fecha">
+			</p>
+			<p>
+				<label for="fechaHora">Fecha y Hora: </label>
+				<input type="datetime-local" id="fechaHora" name="fechaHora">
+			</p>
+			<p>
+				<label for="acepto">Acepto: </label>
+				<input type="checkbox" id="acepto" name="acepto">
+			</p>
+			<p>
+				<select id="provincia" name="provincia">
+					<option value="">Elige provincia</option>
+					<option value="Huesca">Huesca</option>
+					<option value="Teruel">Teruel</option>
+					<option value="Zaragoza">Zaragoza</option>
+				</select>
+			</p>
+			<p>
+				<label for="archivo">Archivo: </label>
+				<input type="file" id="archivo" name="archivo">
+			</p>
+			<p>
+				<input type="radio" name="procesador" value="Ryzen" id="Ryzen">
+				<label for="Ryzen">Procesador Ryzen </label><br>	
+				<input type="radio" name="procesador" value="I5" id="I5" checked>
+				<label for="I5" >Procesador I5 </label><br>
+				<input type="radio" name="procesador" value="I7" id="I7">
+				<label for="I7">Procesador I7 </label>
+			</p>
+			<p>
+				<input type="radio" name="memoria" value="16Gb" id="16Gb">
+				<label for="16Gb">Memoria 16Gb </label><br>	
+				<input type="radio" name="memoria" value="8Gb" id="8Gb" checked>
+				<label for="8Gb" >Memoria 8Gb </label><br>
+				<input type="radio" name="memoria" value="4Gb" id="4Gb">
+				<label for="4Gb">Memoria 4Gb </label>
+			</p>
+			<input type="submit" value="Enviar">
+		</form>
+	</body>
+	
+</html>
